@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* body {
+    background: #4caf50;
+    background: #ff9800;
+    background: #b0bec5;
+    background: #000000;
+    background: #9c27b0;
+    background: #f44336;
+    background: #03a9f4;
+    background: #303f9f;
+    background: #ffffff;
+    background: #1a237e;
+
+    color: #000000;
+    color: #333333;
+    color: #ffffff;
+    color: #1a237e;
+    color: #e0e0e0;
+} */
+
+#home {
+    padding-top: 200px;
+}
+
+section {
+    padding: 25px;
+    border-bottom: 1px solid #ddd;
+    scroll-snap-align: start;
+}
+
+li {
+    list-style: none;
+}
+
+/* -------------------------------- */
+.navbar .nav-link {
+    color: #000000;
+    transition: all 0.4s;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    transition: all 0.3s linear;
+}
+
+.navbar-brand img {
+    border-radius: 32px;
+    width: 125px;
+}
+
+/* -------------------------------- */
+.dropdown-menu {
+    background-color: #111111;
+    border: none;
+}
+
+.dropdown-item {
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #ff5733;
+}
+
+/* -------------------------------- */
+.card:hover {
+    transform: scale(0.99);
+    box-shadow: 0 8px 20px #000000b9;
+    transition: all 0.3s ease;
+}
+
+/* -------------------------------- */
+.whiteMod {
+    background: #e2d8d8;
+    color: #000000;
+}
+
+.darkMod .card:hover {
+    transform: scale(0.9);
+    box-shadow: 0 5px 10px #ebebeb9f;
+}
+
+.darkMod {
+    background: #0b0a13;
+    color: #f5f8ed;
+}
+
+.fa-sun {
+    color: #f7d410;
+}
+
+.fa-moon {
+    color: #111111;
+}
+
+#btnTop {
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    z-index: 1000;
+    display: none;
+}
