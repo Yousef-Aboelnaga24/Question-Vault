@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
 }
 
 /* body {
@@ -24,38 +23,23 @@
 } */
 
 #home {
-    padding-top: 200px;
+    padding: 280px 0 90px 0;
 }
 
 section {
     padding: 25px;
     border-bottom: 1px solid #ddd;
     scroll-snap-align: start;
+    min-height: 90vh;
 }
 
 li {
     list-style: none;
 }
 
-/* -------------------------------- */
-.navbar .nav-link {
-    color: #000000;
-    transition: all 0.4s;
-    font-size: 17px;
-    font-weight: 600;
-}
-
-.navbar .nav-link:hover {
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    transition: all 0.3s linear;
-}
-
 .navbar-brand img {
-    border-radius: 32px;
     width: 125px;
 }
-
 /* -------------------------------- */
 .dropdown-menu {
     background-color: #111111;
@@ -64,7 +48,7 @@ li {
 
 .dropdown-item {
     color: white;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 .dropdown-item:hover {
@@ -72,26 +56,78 @@ li {
 }
 
 /* -------------------------------- */
+.card {
+    min-height: 55vh !important;
+}
+
 .card:hover {
-    transform: scale(0.99);
     box-shadow: 0 8px 20px #000000b9;
     transition: all 0.3s ease;
 }
-
+footer {
+    background: #2b3c4d;
+}
 /* -------------------------------- */
 .whiteMod {
-    background: #e2d8d8;
+    background: white;
     color: #000000;
-}
 
-.darkMod .card:hover {
-    transform: scale(0.9);
-    box-shadow: 0 5px 10px #ebebeb9f;
+    & section {
+        padding: 25px;
+        border-bottom: 2px solid #6b6565;
+        scroll-snap-align: start;
+    }
+
+    & .navbar {
+        opacity: 0.97;
+        background-color: #d7dce6 !important;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+        z-index: 100;
+        padding: 2px;
+
+        & .nav-link {
+            color: #252525de;
+            font-size: 17px;
+            font-weight: 600;
+
+            &:hover {
+                color: #000000;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+    & .navbar-toggler {
+        border: 2px solid #515256;
+    }
 }
 
 .darkMod {
     background: #0b0a13;
     color: #f5f8ed;
+
+    & .navbar {
+        opacity: 0.97;
+        background-color: #1f242d !important;
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+        z-index: 100;
+        padding: 2px;
+
+        & .nav-link {
+            color: #e1dde1;
+            font-size: 17px;
+            font-weight: 600;
+
+            &:hover {
+                color: #ffffff;
+                transition: all 0.3s ease;
+                ;
+            }
+        }
+    }
+    & .navbar-toggler {
+        border: 2px solid #d9dde6;
+        color: #d9dde6;
+    }
 }
 
 .fa-sun {
@@ -101,11 +137,41 @@ li {
 .fa-moon {
     color: #111111;
 }
-
 #btnTop {
     position: fixed;
     bottom: 30px;
     right: 50px;
     z-index: 1000;
+    background: #34c539;
+    border: none;
     display: none;
+}
+/* ----------------------------------------- */
+.fa-facebook:hover {
+    background: linear-gradient(45deg, #0a66c2, #00478f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+.fa-instagram:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+.fa-tiktok:hover {
+    background: linear-gradient(45deg, #25f4ee, #fe2c55);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+.fa-x-twitter:hover {
+    background: linear-gradient(45deg, #242323, #181717, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
 }

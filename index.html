@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question Vault</title>
-    <link rel="website icon" type="PNG" href="./Images/Logo-removebg.png">
+    <link rel="icon" href="./Images/Logo-removebg.png">
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/project.css">
@@ -13,15 +13,13 @@
 
 <body class="">
     <header>
-        <nav class="navbar navbar-expand-lg bg-light bg-opacity-75 fixed-top">
+        <nav class="navbar navbar-expand-lg bg-light-subtle fixed-top">
             <div class="container">
-
-                <a class="navbar-brand" href="#"><img loading="lazy" src="./Images/Logo-removebg.png" alt="logo brand"></a>
-
+                <a class="navbar-brand" href="#"><img loading="lazy" src="./Images/Logo-removebg.png"
+                        alt="Logo brand"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    data-bs-target="#navbarNavDropdown">
+                    <i class="fa fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <div class="navbar-nav ms-auto">
@@ -30,48 +28,29 @@
 
                         <a class="nav-link" href="#create"><i class="fa fa-marker"></i> Create</a>
 
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="fa fa-graduation-cap"></i> Grade
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item text-center" href="#">1</a></li>
-                                <li><a class="dropdown-item text-center" href="#">2</a></li>
-                                <li><a class="dropdown-item text-center" href="#">3</a></li>
-                            </ul>
-                        </div>
+                        <a class="nav-link" href="./html/specialty.html"><i class="fab fa-android"></i> Specialty</a>
+
                         <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                                 <i class="fa fa-book"></i> Subject
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-book"></i> Arabic &
+                                <li><a class="dropdown-item" href="./html/arbic.html"><i class="fa-solid fa-book"></i>
+                                        Arabic &
                                         Religion</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-language"></i>
+                                <li><a class="dropdown-item" href="./html/english.html"><i
+                                            class="fa-solid fa-language"></i>
                                         English</a>
                                 </li>
-                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-atom"></i> Physics</a>
+                                <li><a class="dropdown-item" href="./html/phy.html"><i class="fa-solid fa-atom"></i>
+                                        Physics</a>
                                 </li>
-                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-square-root-variable"></i>
+                                <li><a class="dropdown-item" href="./html/math.html"><i
+                                            class="fa-solid fa-square-root-variable"></i>
                                         Math</a></li>
-                                <li><a class="dropdown-item" href=""><i class="fa fa-book-atlas"></i> Social studies</a>
+                                <li><a class="dropdown-item" href="./html/other.html"><i class="fa fa-book-atlas"></i>
+                                        Another</a>
                                 </li>
-                            </ul>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Specialty
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item text-center" href="#"><i class="fa-solid fa-computer"></i>
-                                        IT</a></li>
-                                <li><a class="dropdown-item text-center" href="#"><i class="fa fa-network-wired"></i>
-                                        Comm</a></li>
-                                <li><a class="dropdown-item text-center" href="#"><i class="fa-brands fa-microsoft"></i>
-                                        ICT</a></li>
                             </ul>
                         </div>
                     </div>
@@ -89,7 +68,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h3 class="fs-3 fw-bold">Welcome to Question Vault<br> Test your knowledge, challenge yourself
+                    <h3 class="fs-3 fw-bold">Welcome to <span class="text-success">Question Vault</span><br> Test your
+                        knowledge, challenge yourself
                     </h3>
                 </div>
                 <div class="col-md-6">
@@ -128,8 +108,7 @@
                         <img loading="lazy" src="./Images/Arabic.jpeg" alt="Arabic and Religion" class="card-img-top">
                         <div class="card-body text-center">
                             <h5 class="card-title">Arabic & Religion</h5>
-                            <a href="./html/arabic.html" target="_blank"
-                                class="btn btn-outline-success btn-sm">Create</a>
+                            <a href="./html/arbic.html" class="btn btn-outline-success btn-sm">Create</a>
                         </div>
                     </div>
                 </div>
@@ -140,8 +119,7 @@
                         <img loading="lazy" src="./Images/english.png" alt="English" class="card-img-top">
                         <div class="card-body text-center">
                             <h5 class="card-title">English</h5>
-                            <a href="./html/english.html" target="_blank"
-                                class="btn btn-outline-success btn-sm">Create</a>
+                            <a href="./html/english.html" class="btn btn-outline-success btn-sm">Create</a>
                         </div>
                     </div>
                 </div>
@@ -152,8 +130,7 @@
                         <img loading="lazy" src="./Images/phy.png" alt="Physics" class="card-img-top">
                         <div class="card-body text-center">
                             <h5 class="card-title">Physics</h5>
-                            <a href="./html/physics.html" target="_blank"
-                                class="btn btn-outline-success btn-sm">Create</a>
+                            <a href="./html/phy.html" target="_blank" class="btn btn-outline-success btn-sm">Create</a>
                         </div>
                     </div>
                 </div>
@@ -164,7 +141,7 @@
                         <img loading="lazy" src="./Images/math.png" alt="Math" class="card-img-top">
                         <div class="card-body text-center">
                             <h5 class="card-title">Math</h5>
-                            <a href="./html/math.html" target="_blank" class="btn btn-outline-success btn-sm">Create</a>
+                            <a href="./html/math.html" class="btn btn-outline-success btn-sm">Create</a>
                         </div>
                     </div>
                 </div>
@@ -172,23 +149,55 @@
                 <!-- Specialty Card -->
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img loading="lazy" src="./Images/Untitled.png" alt="">
-                        <div class="card-body text-center py-3">
+                        <img loading="lazy" class="pb-4 m-auto" style="width: 240px;" src="./Images/Untitled.png"
+                            alt="">
+                        <div class="card-body text-center py-5">
                             <h5 class="card-title">Specialty</h5>
-                            <a href="./html/specialty.html" target="_blank"
-                                class="btn btn-outline-success btn-sm">Create</a>
+                            <a href="./html/specialty.html" class="btn btn-outline-success btn-sm">Create</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Other Card -->
+                <!-- social Student Card -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img loading="lazy" src="./Images/Untitled2.png" class="card-img-top" alt="Other Subjects">
+                        <div class="card-body text-center py-3">
+                            <h5 class="card-title">Social Student</h5>
+                            <a href="./html/socialStudent.html" class="btn btn-outline-success btn-sm">Create</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ICT Card-->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img loading="lazy" src="./Images/kgfs3vqo.png" class="card-img-top" alt="Other Subjects">
+                        <div class="card-body text-center py-3">
+                            <h5 class="card-title">ICT</h5>
+                            <a href="./html/ICT.html" class="btn btn-outline-success btn-sm">Create</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AutoCAD Card -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img loading="lazy" src="./Images/AotuCAD.png" class="card-img-top" alt="Other Subjects">
+                        <div class="card-body text-center py-3">
+                            <h5 class="card-title">AutoCAD</h5>
+                            <a href="./html/AutoCAD.html" class="btn btn-outline-success btn-sm">Create</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Another -->
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <img loading="lazy" src="./Images/Another.JPG" class="card-img-top" alt="Other Subjects">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Other</h5>
-                            <a href="./html/other.html" target="_blank"
-                                class="btn btn-outline-success btn-sm">Create</a>
+                        <div class="card-body text-center py-3">
+                            <h5 class="card-title">Another</h5>
+                            <a href="./html/other.html" class="btn btn-outline-success btn-sm">Create</a>
                         </div>
                     </div>
                 </div>
@@ -196,11 +205,19 @@
         </div>
     </section>
     <!-- ========================================== -->
-    <footer class="text-center p-3 bg-primary fs-4 text-white">Copyright &copy; 2025 Question Vault</footer>
+    <footer class="text-center p-3 fs-4 text-white d-flex justify-content-around">
+        <h5 class="fw-normal fs-4">Copyright &copy; 2025 Question Vault</h5>
+        <div class="social-media d-flex gap-3 pt-1">
+            <a href="" target="_blank"><i class="fs-3 text-white fab fa-facebook"></i></a>
+            <a href="" target="_blank"><i class="fs-3 text-white fab fa-instagram"></i></a>
+            <a href="" target="_blank"><i class="fs-3 text-white fab fa-tiktok"></i></a>
+            <a href="" target="_blank"><i class="fs-3 text-white fab fa-x-twitter"></i></a>
+        </div>
+    </footer>
 
     <div class="container">
         <button class="btn btn-primary rounded-circle float-end" id="btnTop">
-            <i class="fa fa-arrow-up fa-2x"></i></button>
+            <i class="fa fa-arrow-up fa-2"></i></button>
     </div>
 
     <script src="./js/bootstrap.bundle.js"></script>
