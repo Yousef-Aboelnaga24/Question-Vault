@@ -1,104 +1,3 @@
-// Create Card
-let btnCreate = document.getElementById("create");
-// card ;
-btnCreate.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    let questionText = document.getElementById("front").value.trim();
-    let back = document.getElementById("back").value.trim();
-    let box = document.getElementById("box");
-
-    if (questionText === "" || back === "") {
-        alert("Please fill out all fields!");
-        return;
-    }
-
-    let existingQuestions = document.querySelectorAll(".card .back p");
-
-    for (let question of existingQuestions) {
-        if (question.innerText.trim() === questionText) {
-            alert("The question already exists!");
-            return;
-        }
-    }
-
-    box.innerHTML += `   
-        <div class="card pt-2" onclick="flipCard(this)">
-            <div class="btns">
-                <button id="delete" class="btn btn-sm"><i class="fa fa-close fs-5 text-black"></i></button>
-                <button id="update" class="btn btn-sm"><i class="fa fa-marker fs-6 text-black"></i></button>
-            </div>
-            <div class="front">
-                <p>${back}</p>
-            </div>
-            <div class="back">
-                <p>${questionText}</p>
-            </div>
-        </div>`;
-
-    document.getElementById("front").value = "";
-    document.getElementById("back").value = "";
-
-    let cards = JSON.parse(localStorage.getItem("cards")) || [];
-    cards.push({ question: questionText, answer: back });
-    localStorage.setItem("cards", JSON.stringify(cards));
-});
-
-// تحميل الكروت عند فتح الصفحة
-window.addEventListener("DOMContentLoaded", () => {
-    let storedCards = JSON.parse(localStorage.getItem("cards")) || [];
-    let box = document.getElementById("box");
-
-    storedCards.forEach(card => {
-        box.innerHTML += `   
-            <div class="card pt-2" onclick="flipCard(this)">
-                <div class="btns">
-                    <button onclick='deleteCard(this)' class="btn btn-sm"><i class="fa fa-close fs-5 text-black"></i></button>   
-                    <button id="update" class="btn btn-sm"><i class="fa fa-marker fs-6 text-black"></i></button>
-                </div>
-                <div class="front">
-                    <p>${card.answer}</p>
-                </div>
-                <div class="back">
-                    <p>${card.question}</p>
-                </div>
-            </div>`;
-    });
-});
-
-function flipCard(card) {
-    card.classList.toggle("flip");
-}
-// ----------------------------------------------------------------
-// Delete All button
-let deleteAll = document.getElementById('deleteAll');
-
-deleteAll.addEventListener('click', () => {
-    let box = document.getElementById('box');
-    box.innerHTML = '';
-    localStorage.removeItem('cards');
-})
-// ----------------------------------------------------------------
-// Delete button
-function deleteCard(button) {
-    let card = button.closest(".card"); // جلب الكارت التابع للزر المضغوط
-    let question = card.querySelector(".back p").innerText; // استخراج السؤال
-    
-    // جلب جميع الكروت المخزنة
-    let cards = JSON.parse(localStorage.getItem("cards")) || [];
-
-    // تصفية الكروت بحيث يتم حذف الكارت الذي يطابق السؤال
-    let updatedCards = cards.filter(card => card.question !== question);
-
-    // تحديث localStorage بعد الحذف
-    localStorage.setItem("cards", JSON.stringify(updatedCards));
-
-    // حذف الكارت من الصفحة
-    card.remove();
-}
-
-// ----------------------------------------------------------------
-// Update 
 // ----------------------------------------------------------------
 // Button mode
 let themeDark = document.getElementById('dark')
@@ -136,7 +35,7 @@ themeWhite.addEventListener('click', () => {
 // Button top
 let btnTop = document.getElementById('btnTop')
 window.onscroll = function () {
-    if (document.documentElement.scrollTop > 700) {
+    if (document.documentElement.scrollTop > 710) {
         btnTop.style.display = 'block';
     } else {
         btnTop.style.display = 'none';
@@ -147,14 +46,34 @@ btnTop.addEventListener('click', function () {
 });
 // --------------------------------------------------------------
 let btnDisplay = document.getElementById('display');
+let btnHide = document.getElementById('hide');
 let template = document.getElementById('createForm');
 
-// إخفاء النموذج افتراضيًا عند تحميل الصفحة
-template.style.display = 'none';
+window.addEventListener('DOMContentLoaded', () => {
+    let display = localStorage.getItem('display');
+    
+    if (display === 'display') {
+        btnDisplay.style.display = 'none';
+        btnHide.style.display = 'block';
+        template.style.display = 'block';
+    } else {
+        btnHide.style.display = 'none';
+        template.style.display = 'none';
+    }
+})
 
+// button display
 btnDisplay.addEventListener('click', function () {
-    let isHidden = template.style.display === 'none';
-    template.style.display = isHidden ? 'block' : 'none';
-    btnDisplay.textContent = isHidden ? 'Hide' : 'Display';
+    template.style.display = 'block';
+    btnDisplay.style.display = 'none';
+    btnHide.style.display = 'block';
+    localStorage.setItem('display', 'display')
+})
+// button hide
+btnHide.addEventListener('click', function () {
+    template.style.display = 'none';
+    btnHide.style.display = 'none';
+    btnDisplay.style.display = 'block';
+    localStorage.setItem('display', 'hide');
 });
 // ---------------------------------------------------------------

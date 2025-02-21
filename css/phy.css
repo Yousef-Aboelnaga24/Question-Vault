@@ -1,0 +1,66 @@
+.card {
+    width: auto;
+    min-width: 200px;
+    max-width: 300px;
+    height: auto;
+    min-height: 150px;
+    max-height: 300px;
+    padding: 10px;
+    background-color: #c7c2b7;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+    position: relative;
+    border: none;
+    z-index: 1000;
+}
+
+.card .front,
+.card .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow-y: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.card .front {
+    background: url('../Images/physics-.png');
+    background-position: center;
+    background-size: cover;
+    font-weight: 500;
+}
+
+.card .back {
+    background-color: #f1f1f1;
+    color: #28933f;
+    transform: rotateY(180deg);
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.card p {
+    margin: 0;
+    font-size: 16px;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+}

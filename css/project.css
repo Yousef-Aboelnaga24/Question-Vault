@@ -13,7 +13,6 @@
     background: #03a9f4;
     background: #303f9f;
     background: #ffffff;
-    background: #1a237e;
 
     color: #000000;
     color: #333333;
@@ -24,6 +23,10 @@
 
 #home {
     padding: 280px 0 90px 0;
+}
+
+.navbar {
+    margin-bottom: 5rem
 }
 
 section {
@@ -40,6 +43,7 @@ li {
 .navbar-brand img {
     width: 125px;
 }
+
 /* -------------------------------- */
 .dropdown-menu {
     background-color: #111111;
@@ -60,13 +64,10 @@ li {
     min-height: 55vh !important;
 }
 
-.card:hover {
-    box-shadow: 0 8px 20px #000000b9;
-    transition: all 0.3s ease;
-}
 footer {
     background: #2b3c4d;
 }
+
 /* -------------------------------- */
 .whiteMod {
     background: white;
@@ -96,8 +97,14 @@ footer {
             }
         }
     }
+
     & .navbar-toggler {
         border: 2px solid #515256;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 20px #000000b9;
+        transition: all 0.3s ease;
     }
 }
 
@@ -120,13 +127,18 @@ footer {
             &:hover {
                 color: #ffffff;
                 transition: all 0.3s ease;
-                ;
             }
         }
     }
+
     & .navbar-toggler {
         border: 2px solid #d9dde6;
         color: #d9dde6;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 20px #555555b9;
+        transition: all 0.3s ease;
     }
 }
 
@@ -137,6 +149,7 @@ footer {
 .fa-moon {
     color: #111111;
 }
+
 #btnTop {
     position: fixed;
     bottom: 30px;
@@ -146,6 +159,7 @@ footer {
     border: none;
     display: none;
 }
+
 /* ----------------------------------------- */
 .fa-facebook:hover {
     background: linear-gradient(45deg, #0a66c2, #00478f);
@@ -154,6 +168,7 @@ footer {
     transform: scale(1.2);
     transition: all 0.3s ease-in-out;
 }
+
 .fa-instagram:hover {
     background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
     -webkit-background-clip: text;
@@ -161,6 +176,7 @@ footer {
     transform: scale(1.2);
     transition: all 0.3s ease-in-out;
 }
+
 .fa-tiktok:hover {
     background: linear-gradient(45deg, #25f4ee, #fe2c55);
     -webkit-background-clip: text;
@@ -168,6 +184,7 @@ footer {
     transform: scale(1.2);
     transition: all 0.3s ease-in-out;
 }
+
 .fa-x-twitter:hover {
     background: linear-gradient(45deg, #242323, #181717, #000000);
     -webkit-background-clip: text;
