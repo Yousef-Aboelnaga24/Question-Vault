@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cube</title>
+  <link rel="icon" href="../../Images/Logo-removebg.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../../css/all.css">
+  <link rel="stylesheet" href="../../css/all.min.css">
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+<div id="waitMessage" style="display: none;" class="wait-msg">Wating...</div>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-light-subtle fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img loading="lazy" src="../../Images/Logo-removebg.png" alt="Logo brand"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <div class="navbar-nav ms-auto">
+
+            <a class="nav-link" href="../../index.html"><i class="fa fa-home"></i> Home</a>
+
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#"><i
+                  class="fa fa-gamepad"></i> Games</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../Spin-The-Wheel-main/index.html">Wheel
+                    Spinner</a>
+                </li>
+                <li><a class="dropdown-item" href="../Flip-Card/index.html">Card Flip</a></li>
+              </ul>
+            </div>
+
+            <a class="nav-link" href="./html/specialty.html"><i class="fab fa-android"></i> Specialty</a>
+
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                <i class="fa fa-book"></i> Subject
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./html/arbic.html"><i class="fa-solid fa-book"></i>
+                    Arabic &
+                    Religion</a></li>
+                <li><a class="dropdown-item" href="./html/english.html"><i class="fa-solid fa-language"></i>
+                    English</a>
+                </li>
+                <li><a class="dropdown-item" href="./html/phy.html"><i class="fa-solid fa-atom"></i>
+                    Physics</a>
+                </li>
+                <li><a class="dropdown-item" href="./html/math.html"><i class="fa-solid fa-square-root-variable"></i>
+                    Math</a></li>
+                <li><a class="dropdown-item" href="./html/socialStudent.html"><i class="fa fa-book-atlas"></i>
+                    Social Student</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="ms-auto">
+            <button id="white" class="btn fs-4"><i class="fa fa-sun"></i></button>
+            <button id="dark" class="btn fs-4"><i class="fa fa-moon"></i></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="cube-container container">
+    <div class="scene">
+      <div class="cube" tabindex="0">
+        <div class="cube-face front"></div>
+        <div class="cube-face back"></div>
+        <div class="cube-face right"></div>
+        <div class="cube-face left"></div>
+        <div class="cube-face top"></div>
+        <div class="cube-face bottom"></div>
+        <div class="question"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="question-manager rounded-3 border border-2 border-black" id="questionManager">
+    <h2 class="text-center">Question Manager</h2>
+    <button id="toggleManager" class="btn btn-success fw-bold fs-6">Hide questions list</button>
+    <div class="manager-content">
+      <div>
+        <form class="" id="questionForm">
+          <input type="text" class="form-control bg-transparent" id="newQuestion" placeholder="Add the question"
+            required>
+          <input type="text" class="form-control bg-transparent" id="newAnswer" placeholder="Add the answer" required>
+          <button id="addQuestionBtn" type="button" class="btn btn-success fw-bold fs-6">Add question</button>
+
+        </form>
+      </div>
+      <ul id="questionsList"></ul>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+  <script src="../../js/bootstrap.bundle.js" defer></script>
+</body>
+
+</html>

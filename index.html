@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="education, quiz, knowledge">
+    <meta name="description"
+        content="Question Vault is an interactive platform designed to challenge your knowledge across multiple subjects. Test your skills in Arabic, English, Math, and more!">
+    <title>Question Vault</title>
+    <link rel="icon" href="./Images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/project.css">
+</head>
+
+<body class="">
+    <!-- Header -->
+    <header>
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-lg bg-light-subtle fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img loading="lazy" src="./Images/Logo-removebg.png"
+                        alt="Question Vault Logo" width="150" height="auto"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <div class="navbar-nav ms-auto">
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#"><i
+                                    class="fa fa-gamepad"></i> Games</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./Games/Cube/index.html">Cube</a></li>
+                                <li><a class="dropdown-item" href="./Games/Spin-The-Wheel-main/index.html">Wheel
+                                        Spinner</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./Games/Flip-Card/index.html">Card Flip</a></li>
+                            </ul>
+                        </div>
+                        <a class="nav-link" href="#about"><i class="fa fa-info-circle"></i> About</a>
+
+                        <a class="nav-link" href="#create"><i class="fa fa-marker"></i> Create</a>
+
+                        <a class="nav-link" href="./html/specialty.html"><i class="fab fa-android"></i> Specialty</a>
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="fa fa-book"></i> Subject
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./html/arabic.html"><i class="fa-solid fa-book"></i>
+                                        Arabic &
+                                        Religion</a></li>
+                                <li><a class="dropdown-item" href="./html/english.html"><i
+                                            class="fa-solid fa-language"></i>
+                                        English</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./html/phy.html"><i class="fa-solid fa-atom"></i>
+                                        Physics</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./html/math.html"><i
+                                            class="fa-solid fa-square-root-variable"></i>
+                                        Math</a></li>
+                                <li><a class="dropdown-item" href="./html/socialStudent.html"><i
+                                            class="fa fa-book-atlas"></i>
+                                        Social Student</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="ms-auto">
+                        <button id="white" class="btn fs-4"><i class="fa fa-sun" aria-label="Light Mode"></i></button>
+                        <button id="dark" class="btn fs-4"><i class="fa fa-moon" aria-label="Dark Mode"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Spinner Loading -->
+    <div class="spinner-warraper" id="spinner">
+        <img src="./Images/Vanilla@1x-1.0s-280px-250px.svg" loading="lazy" alt="Spinner Loading">
+    </div>
+
+    <main>
+        <!-- Hero Page -->
+        <section id="home" style="padding-top: 180px; padding-bottom: 60px; min-height: 80vh; box-sizing: border-box;">
+            <div
+                style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+
+                <!-- Text -->
+                <div style="flex: 1 1 300px; min-width: 280px; padding: 10px;">
+                    <h3 style="font-size: 24px; font-weight: bold; line-height: 1.5;">
+                        Welcome to <span class="strong-text">Question Vault</span><br>
+                        Test your knowledge, challenge yourself
+                    </h3>
+                </div>
+
+                <!-- Image -->
+                <div style="flex: 1 1 300px; min-width: 280px; padding: 10px; text-align: center;">
+                    <img src="./Images/Logo-removebg.png" alt="Question Vault Logo" loading="lazy"
+                        style="max-width: 100%; height: auto;" width="400">
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- About Page -->
+        <section id="about">
+            <h2 class="text-center py-4">About Us</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="pt-4 fs-4">
+                            Question Vault is a fun and engaging platform designed to challenge your knowledge across
+                            multiple
+                            subjects. We believe learning should be interactive and enjoyable, providing students with a
+                            chance
+                            to test their skills in an exciting way. Join us and discover the fun in education!</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img loading="lazy" src="./Images/photo1-removebg-preview.png" alt="Question Vault Illustration"
+                            class="img-fluid" width="400" height="auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Create Page -->
+        <section id="create">
+            <h2 class="text-center py-4">Create</h2>
+            <div class="container pb-4">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <!-- Arabic & Religion Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img loading="lazy" src="./Images/Arabic.jpg" alt="Arabic and Religion"
+                                class="card-img-top img-fluid">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Arabic & Religion</h3>
+                                <a href="./html/arabic.html" class="btn btn-outline-success">Create</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- English Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img loading="lazy" src="./Images/english.jpg" alt="English" class="card-img-top img-fluid">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">English</h3>
+                                <a href="./html/english.html" class="btn btn-outline-success">Create</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Physics Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img loading="lazy" src="./Images/physics.jpg" alt="Physics" class="card-img-top img-fluid">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Physics</h3>
+                                <a href="./html/phy.html" class="btn btn-outline-success">Create</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Math Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img loading="lazy" src="./Images/Math.jpg" alt="Math" class="card-img-top img-fluid">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Math</h3>
+                                <a href="./html/math.html" class="btn btn-outline-success">Create</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Specialty Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img loading="lazy" class="pb-4 m-auto card-img-top img-fluid" style="width: 240px;"
+                                src="./Images/Untitled.png" alt="">
+                            <div class="card-body text-center py-5">
+                                <h3 class="card-title">Specialty</h3>
+                                <a href="./html/specialty.html" class="btn btn-outline-success">Create</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Student Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img loading="lazy" src="./Images/Social-Student.jpg" class="card-img-top img-fluid"
+                                alt="Social Student Subjects">
+                            <div class="card-body text-center py-3">
+                                <h3 class="card-title">Social Studies</h3>
+                                <a href="./html/socialStudent.html" class="btn btn-outline-success">Create</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ICT Card-->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img loading="lazy" src="./Images/ICT.jpg" class="card-img-top img-fluid" alt="ICT">
+                            <div class="card-body text-center py-3">
+                                <h3 class="card-title">ICT</h3>
+                                <a href="./html/ICT.html" class="btn btn-outline-success">Create</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AutoCAD Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img loading="lazy" src="./Images/autocad.jpg" class="card-img-top img-fluid" alt="AutoCAD">
+                            <div class="card-body text-center py-3">
+                                <h3 class="card-title">AutoCAD</h3>
+                                <a href="./html/AutoCAD.html" class="btn btn-outline-success">Create</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Another -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img loading="lazy" src="./Images/Another.JPG" class="card-img-top img-fluid"
+                                alt="Other Subjects">
+                            <div class="card-body text-center py-3">
+                                <h3 class="card-title">Another</h3>
+                                <a href="./html/other.html" class="btn btn-outline-success">Create</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center p-3 fs-4 text-white d-flex justify-content-around">
+        <h4 class="fw-normal fs-4">Copyright &copy; 2025 Question Vault</h4>
+        <div class="social-media d-flex gap-3 pt-1">
+            <a href="#" aria-label="Facebook" title="Visit our Facebook page"><i
+                    class="fs-3 text-white fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram" title="Visit our Instagram profile"><i
+                    class="fs-3 text-white fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok" title="Visit our TikTok account"><i
+                    class="fs-3 text-white fab fa-tiktok"></i></a>
+        </div>
+    </footer>
+
+    <!-- Button Top -->
+    <div class="container">
+        <button class="btn btn-primary rounded-circle float-end" id="btnTop" aria-label="Back to Top">
+            <i class="fa fa-arrow-up"></i></button>
+    </div>
+
+    <script src="./js/bootstrap.bundle.js" defer></script>
+    <script src="./js/main.min.js"></script>
+</body>
+
+</html>

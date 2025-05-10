@@ -1,0 +1,194 @@
+canvas {
+    transition: all 0.75s ease-out;
+}
+
+.wheel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 50px auto;
+}
+
+.center-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+    background-color: #ff9500;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.center-circle:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50%) scale(1);
+    transition: all 0.3s linear;
+}
+
+.center-circle::before {
+    content: 'spin';
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 35px auto;
+}
+
+.inputArea {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.inputArea textarea {
+    height: 400px;
+    width: 50%;
+    font-size: 18px;
+    padding: 10px;
+    resize: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.triangle {
+    width: 20px;
+    height: 20px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 30px solid #FF3B30;
+    position: absolute;
+    top: 50%;
+    right: -190%;
+    transform: translateY(-50%);
+}
+
+.modal {
+    transition: all 0.3s linear;
+    top: 150px !important;
+}
+
+@media (max-width: 768px) {
+    #canvas {
+        width: 275px;
+        height: 275px;
+    }
+
+    .inputArea textarea {
+        height: 200px;
+        font-size: 16px;
+    }
+
+    .center-circle {
+        width: 55px;
+        height: 55px;
+    }
+
+    .center-circle::before {
+        font-size: 16px;
+        margin: 15px auto;
+    }
+
+    .triangle {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        left: 280%;
+        transform: translateY(-50%);
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-right: 25px solid #FF3B30;
+    }
+}
+
+/* ------------------------------- */
+.navbar-brand img {
+    width: 125px;
+}
+
+.dropdown-menu {
+    background-color: #111111 !important;
+    border: none;
+}
+
+.dropdown-item {
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #ff5733 !important;
+}
+
+.whiteMod {
+    background: white;
+    color: #000000;
+}
+
+.whiteMod .navbar {
+    background-color: #d7dce6 !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    padding: 2px;
+}
+
+.whiteMod .nav-link {
+    color: #252525de;
+    font-size: 17px;
+    font-weight: 600;
+
+    &:hover {
+        color: #000000;
+        transition: all 0.3s ease;
+    }
+}
+
+.whiteMod .navbar-toggler {
+    border: 2px solid #515256;
+}
+
+.darkMod {
+    background: #0b0a13;
+    color: #f5f8ed;
+}
+
+.darkMod .navbar {
+    background-color: #1f242d !important;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+    padding: 2px;
+
+}
+
+.darkMod .nav-link {
+    color: #e1dde1;
+    font-size: 17px;
+    font-weight: 600;
+
+    &:hover {
+        color: #ffffff;
+        transition: all 0.3s ease;
+    }
+}
+
+.darkMod .navbar-toggler {
+    border: 2px solid #d9dde6;
+    color: #d9dde6;
+}
+
+.whiteMod .center-circle {
+    background-color: #ff9500;
+}
+
+.darkMod .center-circle {
+    background-color: #34c759;
+}
+
+.fa-sun {
+    color: #f7d410;
+}
+
+.fa-moon {
+    color: #111111;
+}

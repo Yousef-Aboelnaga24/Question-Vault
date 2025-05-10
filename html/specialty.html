@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specialty</title>
+    <link rel="website icon" type="PNG" href="../Images/Logo-removebg.png">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/specialty.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a href="#" class="navbar-brand"><img loading="lazy" src="../Images/Logo-removebg.png" alt=""></a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navBar"><i
+                        class="fa fa-bars"></i>
+                </button>
+                <div class="navbar-collapse collapse" id="navBar">
+                    <div class="navbar-nav ms-auto">
+                        <a href="../index.html" class="nav-link"><i class="fa fa-home"></i> Home</a>
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="fa fa-book"></i> Subject
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./arbic.html"><i class="fa-solid fa-book"></i> Arabic
+                                        &
+                                        Religion</a></li>
+                                <li><a class="dropdown-item" href="./english.html"><i class="fa-solid fa-language"></i>
+                                        English</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./english.html"><i class="fa-solid fa-atom"></i>
+                                        Physics</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./math.html"><i
+                                            class="fa-solid fa-square-root-variable"></i>
+                                        Math</a></li>
+                                <li><a class="dropdown-item" href="./other.html"><i class="fa fa-book-atlas"></i>
+                                        Another</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#" class="link text-primary nav-link" style="display: block;" id="display">Display</a>
+                        <a href="#" class="link text-primary nav-link" style="display: none !important;" id="hide">Hide</a>
+                    </div>
+                    <div class="ms-auto">
+                        <button id="white" class="btn fs-4"><i class="fa fa-sun"></i></button>
+                        <button id="dark" class="btn fs-4"><i class="fa fa-moon"></i></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="pt-5">
+            <div class="">
+                <div class="container d-flex justify-content-between">
+                    <button id="deleteAll" class="btn btn-sm btn-danger">Delete All</button>
+                    <button id="random" class="btn btn-sm btn-success">Random</button>
+                </div>
+                <div class="container">
+                    <h1 class="text-center">Specialty</h1>
+                    <p class="lead text-center">This is a specialty section.</p>
+                </div>
+            </div>
+            <div class="container pt-3" id="createForm">
+                <form>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <input id="front" type="text" class="form-control form-control-lg" placeholder="Question">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <input id="back" type="text" class="form-control form-control-lg" placeholder="Back">
+                        </div>
+                        <div class="col-md-4 d-grid mb-3">
+                            <button id="create" class="btn btn-success btn-lg"><i class="fa fa-marker"></i>
+                                Create</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </header>
+    <section>
+        <div class="container pt-3">
+            <div class="row gap-3" id="box">
+
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <button class="btn btn-primary rounded-circle float-end" id="btnTop">
+            <i class="fa fa-arrow-up fa-2"></i></button>
+    </div>
+    <script src="../js/mainAll.min.js"></script>
+    <script src="../js/specialty.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
