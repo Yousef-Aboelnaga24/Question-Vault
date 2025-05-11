@@ -1,31 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
 
 body {
-    font-family: "Luckiest Guy", sans-serif;
+    font-family: "Slackey", sans-serif;
     font-weight: 400;
-    word-spacing: 1px;
-    letter-spacing: 1.5px;
+    font-style: normal;
     clear: both;
 }
 
 #home {
-    padding: 250px 0 0 0;
-}
-
-#home {
-    padding: 25px;
     border-bottom: 2px solid grey;
     scroll-snap-align: start;
-    min-height: 50vh;
+    padding-top: 170px;
+    padding-bottom: 60px;
+    min-height: 80vh;
+    box-sizing: border-box;
 }
 
-#about {
-    padding: 25px;
-    border-bottom: 2px solid grey;
-    scroll-snap-align: start;
-    min-height: 90vh;
-}
-
+#about,
 #Create {
     padding: 25px;
     border-bottom: 2px solid grey;
@@ -135,6 +126,7 @@ body {
 
 .card:hover {
     box-shadow: 0 8px 20px #000000b9;
+    transition: all 0.3s ease;
 }
 
 /* Footer */
@@ -184,7 +176,7 @@ footer {
 }
 
 .darkMod .card {
-    background-color: #FEFAEF;
+    background-color: #fffdf9ec;
 }
 
 .darkMod .card-title {
@@ -273,25 +265,47 @@ footer {
     z-index: 1000;
     width: 100%;
     height: 100%;
-    transition: all 0.75s linear;
+    transition: all 0.3s linear;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     #home {
-        padding: 180px 20px 0;
+        padding-top: 120px;
+        padding-bottom: 40px;
     }
 
     .strong-text {
         font-size: 30px;
+        text-align: center;
     }
 
     .card {
-        min-height: 40vh !important;
+        min-height: auto;
+        margin-bottom: 20px;
     }
 
     .navbar .nav-link {
-        font-size: 15px;
+        font-size: 14px;
+        text-align: center;
     }
 
+    .navbar {
+        margin-bottom: 2rem;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .social-media a {
+        font-size: 1.2rem;
+        margin: 0 10px;
+    }
 }

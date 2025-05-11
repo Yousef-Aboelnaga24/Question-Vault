@@ -1,7 +1,7 @@
 let themeDark = document.getElementById('dark')
 let themeWhite = document.getElementById('white')
 let btnTop = document.getElementById('btnTop')
-let spinnerWapper = document.getElementById('spinner')
+let spinnerWrapper = document.getElementById('spinner')
 // =========================================================
 window.addEventListener('DOMContentLoaded', () => {
     const theme = localStorage.getItem('theme');
@@ -45,9 +45,9 @@ btnTop.addEventListener('click', function () {
 // --------------------------------------------------------------
 window.addEventListener('load', function () {
     setTimeout(() => {
-        spinnerWapper.style.opacity = '0'
+        spinnerWrapper.style.opacity = '0'
         setTimeout(() => {
-            spinnerWapper.style.display = 'none'
+            spinnerWrapper.style.display = 'none'
         }, 1000);
     }, 2000);
 })
