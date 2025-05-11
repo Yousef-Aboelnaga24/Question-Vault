@@ -37,15 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // إضافة سؤال جديد
   const addQuestionBtn = document.getElementById('addQuestionBtn');
-  
+
   addQuestionBtn.addEventListener('click', () => {
     const newQuestionInput = document.getElementById('newQuestion');
     const newAnswerInput = document.getElementById('newAnswer');
     const newQ = newQuestionInput.value.trim();
     const newA = newAnswerInput.value.trim();
-    
+
     if (newQ && newA) {
-      // التحقق من تكرار السؤال
       const isDuplicate = questions.some(q => q.question === newQ);
       if (isDuplicate) {
         alert('هذا السؤال تم إضافته مسبقًا');
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const newAnswerInput = document.getElementById('newAnswer');
     const newQ = newQuestionInput.value.trim();
     const newA = newAnswerInput.value.trim();
-    
+
     if (newQ && newA) {
       // التحقق من تكرار السؤال
       const isDuplicate = questions.some(q => q.question === newQ);
@@ -93,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let rotationX = -30, rotationY = 45;
   let isQuestionOpen = false;
   let canOpen = true;
- // حالة عرض السؤال
+  // حالة عرض السؤال
   let currentQuestion = null; // يخزن السؤال الحالي مع إجابته
 
   const cube = document.querySelector('.cube');
@@ -158,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
       newAnswerInput.value = '';
     }
   });
-  
+
 
 
   const faceTransforms = {
@@ -207,28 +206,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // إخفاء الإجابة وغلق المكعب واستئناف التدوير التلقائي بعد 5 ثوانٍ
-  
-    function hideAnswerAndCloseCube() {
-      questionEl.style.transition = 'all 0.8s ease-in-out';
-      questionEl.style.transform = faceTransforms.front;
-      questionEl.style.opacity = '0';
-      topFace.classList.remove('top-open');
-      topFace.classList.add('top-close');
-    
-      canOpen = false;
-    
+
+  function hideAnswerAndCloseCube() {
+    questionEl.style.transition = 'all 0.8s ease-in-out';
+    questionEl.style.transform = faceTransforms.front;
+    questionEl.style.opacity = '0';
+    topFace.classList.remove('top-open');
+    topFace.classList.add('top-close');
+
+    canOpen = false;
+
+    setTimeout(() => {
+      topFace.classList.remove('top-close');
+
       setTimeout(() => {
-        topFace.classList.remove('top-close');
-    
-        setTimeout(() => {
-          canOpen = true;
-        }, 3000);
-    
-      
-      }, 1000);
-    }
-    
-  
+        canOpen = true;
+      }, 3000);
+
+
+    }, 1000);
+  }
+
+
 
   let isClosing = false;
   cube.addEventListener('click', () => {
@@ -423,7 +422,7 @@ function hideAnswerAndCloseCube() {
   setTimeout(() => {
     topFace.classList.remove('top-close');
     // استئناف التدوير التلقائي بعد اختفاء الإجابة
-  
+
   }, 1000);
 }
 

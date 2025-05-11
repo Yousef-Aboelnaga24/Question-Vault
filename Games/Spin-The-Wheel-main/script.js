@@ -35,7 +35,7 @@ let items = document.getElementsByTagName("textarea")[0].value.split("\n");
 let currentDeg = 0;
 let step = 360 / items.length;
 let colors = [];
-let itemDegs = {};
+let itemDeg = {};
 
 for (let i = 0; i < items.length + 1; i++) {
     colors.push(randomColor());
@@ -66,14 +66,10 @@ function draw() {
 
     ctx.clearRect(0, 0, width, height);
 
-    if (items.length === 0) {
-        return;
-    }
-
     step = 360 / items.length;
 
     let startDeg = currentDeg;
-    itemDegs = {};
+    itemDeg = {};
 
     for (let i = 0; i < items.length; i++, startDeg += step) {
         const color = colors[i];
@@ -105,7 +101,7 @@ function draw() {
         ctx.fillText(items[i], 130, 10);
         ctx.restore();
 
-        itemDegs[items[i]] = {
+        itemDeg[items[i]] = {
             startDeg: startDeg,
             endDeg: endDeg
         };
@@ -138,29 +134,40 @@ function animate() {
     window.requestAnimationFrame(animate);
 }
 
-const textarea = document.getElementsByTagName("textarea")[0]
+const textarea = document.getElementsByTagName("textarea")[0];
 function spin() {
     if (speed !== 0) return;
 
-    createWheel();
     if (items.length === 0) {
         swal.fire({
             icon: 'warning',
             title: 'تنبية',
             text: 'من فضلك املأ القائمة!',
             confirmButtonText: 'حاضر'
-        })
+        });
         return;
     }
-
     textarea.disabled = true;
-
     maxRotation = 0;
     currentDeg = 0;
 
     const randomIndex = Math.floor(Math.random() * items.length);
     selectedItem = items[randomIndex];
-    const selectedDeg = (itemDegs[selectedItem].startDeg + itemDegs[selectedItem].endDeg) / 2;
+
+    createWheel();
+    draw();
+
+    if (!itemDeg[selectedItem]) {
+        swal.fire({
+            icon: 'error',
+            title: 'خطأ',
+            text: 'حدثت مشكلة أثناء اختيار العنصر',
+            confirmButtonText: 'حسنًا'
+        });
+        return;
+    }
+
+    const selectedDeg = (itemDeg[selectedItem].startDeg + itemDeg[selectedItem].endDeg) / 2;
     maxRotation = (360 * 6) - selectedDeg + 10;
 
     pause = false;
@@ -186,9 +193,10 @@ removeBtn.addEventListener('click', function () {
 
     createWheel();
 });
-// -----------------------------------------
-let themeDark = document.getElementById('dark')
-let themeWhite = document.getElementById('white')
+
+// Theme switch
+let themeDark = document.getElementById('dark');
+let themeWhite = document.getElementById('white');
 
 window.addEventListener('DOMContentLoaded', () => {
     const theme = localStorage.getItem('theme');

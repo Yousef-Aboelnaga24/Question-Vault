@@ -38,10 +38,10 @@
 }
 
 .card .front {
-    background: url('../Images/physics-.png');
+    background: linear-gradient(135deg, #00000060, #00000070), url('../Images/Physics-.jpeg');
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    font-weight: 500;
 }
 
 .card .back {
@@ -56,7 +56,7 @@
 
 .card p {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
     word-wrap: break-word;
     word-break: break-word;
     overflow-wrap: break-word;

@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 body {
-    font-family: 'Tajawal', sans-serif;
+    font-family: "Luckiest Guy", sans-serif;
+    font-weight: 400;
+    word-spacing: 1px;
+    letter-spacing: 1.5px;
     clear: both;
 }
 
@@ -7,35 +12,31 @@ body {
     padding: 250px 0 0 0;
 }
 
-#home{
-    
-        padding: 25px;
-        border-bottom: 2px solid grey;
-        scroll-snap-align: start;
-        min-height: 50vh;
-    
+#home {
+    padding: 25px;
+    border-bottom: 2px solid grey;
+    scroll-snap-align: start;
+    min-height: 50vh;
 }
-#about{
 
-        padding: 25px;
-        border-bottom: 2px solid grey;
-        scroll-snap-align: start;
-        min-height: 90vh;
-    
+#about {
+    padding: 25px;
+    border-bottom: 2px solid grey;
+    scroll-snap-align: start;
+    min-height: 90vh;
 }
-#Create{
-    
-        padding: 25px;
-        border-bottom: 2px solid grey;
-        scroll-snap-align: start;
-        min-height: 90vh;
-    
+
+#Create {
+    padding: 25px;
+    border-bottom: 2px solid grey;
+    scroll-snap-align: start;
+    min-height: 90vh;
 }
 
 
 /* Navbar */
 .navbar {
-    opacity: 0.97;
+    opacity: 0.95;
     background-color: #d7dce6 !important;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
     z-index: 100;
@@ -77,7 +78,7 @@ body {
 }
 
 .strong-text {
-    font-size: 52px;
+    font-size: 50px;
     font-weight: bold;
     text-transform: uppercase;
     background: linear-gradient(90deg,
@@ -181,8 +182,15 @@ footer {
 .darkMod .card:hover {
     box-shadow: 0 8px 20px #555555b9;
 }
-.darkMod .card{background-color: #FEFAEF;}
-.darkMod .card-title{color: black;}
+
+.darkMod .card {
+    background-color: #FEFAEF;
+}
+
+.darkMod .card-title {
+    color: black;
+}
+
 /* White Mode */
 .whiteMod {
     background: white;
