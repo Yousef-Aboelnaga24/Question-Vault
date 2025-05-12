@@ -242,7 +242,7 @@ body {
 
   .cube-face::before {
     content: '?';
-    font-size: 150px;
+    font-size: 130px;
     text-align: center;
   }
 
