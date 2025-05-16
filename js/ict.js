@@ -10,7 +10,12 @@ btnCreate.addEventListener("click", (event) => {
     let box = document.getElementById("box");
 
     if (!questionText || !back) {
-        alert("Please fill out all fields!");
+        Swal.fire({
+            icon: 'warning',
+            title: 'تنبيه',
+            text: '!من فضلك املأ كل الخانات',
+            confirmButtonText: 'حسناً'
+        });
         return;
     }
 
