@@ -1,10 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
-
 body {
-    font-family: "Luckiest Guy", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
     clear: both;
 }
 
@@ -97,7 +91,7 @@ canvas {
     }
 
     .center-circle::before {
-        font-size: 15px;
+        font-size: 14px;
         text-align: center;
         margin: 16px auto;
     }

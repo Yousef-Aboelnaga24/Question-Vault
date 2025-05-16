@@ -1,10 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
-
 body {
-    font-family: "Luckiest Guy", sans-serif !important;
-    font-weight: 400;
-    word-spacing: 1px;
-    letter-spacing: 1.5px;
     clear: both;
     position: relative;
 }
@@ -127,11 +121,11 @@ body {
   }
 
   50% {
-    transform: rotateX(100deg) translateZ(255px);
+    transform: rotateX(100deg) translateZ(260px);
   }
 
   80% {
-    transform: rotateX(110deg) translateZ(255px);
+    transform: rotateX(110deg) translateZ(270px);
   }
 
   100% {

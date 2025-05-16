@@ -33,8 +33,8 @@ themeWhite.addEventListener('click', () => {
 const key = 'cardData'
 let createBtn = document.getElementById('create')
 createBtn.addEventListener('click', function () {
-    let front = document.getElementById('front').value.trim()
-    let back = document.getElementById('back').value.trim()
+    let back = document.getElementById('front').value.trim()
+    let front = document.getElementById('back').value.trim()
     let box = document.getElementById('box')
     if (!front || !back) {
         Swal.fire({
