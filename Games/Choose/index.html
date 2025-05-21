@@ -4,23 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cube</title>
-  <link rel="icon" href="../../Images/Logo-webp.webp">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="../../css/main.css">
+  <title>Choose Answer</title>
+  <link rel="icon" href="../../Images/LOGO.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="./style.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 </head>
 
 <body>
-  <div id="waitMessage" style="display: none;" class="wait-msg">Waiting...</div>
   <header>
-    <nav class="navbar navbar-expand-lg bg-light-subtle fixed-top">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg bg-light-subtle">
       <div class="container">
-        <a class="navbar-brand" href="#"><img loading="lazy" src="../../Images/Logo-webp.webp"
-            alt="Question Vault Logo"></a>
+        <a class="navbar-brand" href="#"><img src="../../Images/Logo-webp.webp" alt="Question Vault Logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
           aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
@@ -38,7 +37,7 @@
                     Spinner</a>
                 </li>
                 <li><a class="dropdown-item" href="../Flip-Card/index.html">Card Flip</a></li>
-                <li><a class="dropdown-item" href="../Choose/index.html">Choose</a></li>
+                <li><a href="../Cube/index.html" class="dropdown-item">Cube</a></li>
               </ul>
             </div>
 
@@ -76,40 +75,48 @@
         </div>
       </div>
     </nav>
-  </header>
+    <section class="d-flex flex-column justify-content-center align-items-center">
+      <h1 class="text-center">Choose Answer</h1>
+      <div class="container">
 
-  <div class="cube-container container">
-    <div class="scene">
-      <div class="cube" tabindex="0">
-        <div class="cube-face front"></div>
-        <div class="cube-face back"></div>
-        <div class="cube-face right"></div>
-        <div class="cube-face left"></div>
-        <div class="cube-face top"></div>
-        <div class="cube-face bottom"></div>
-        <div class="question"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="question-manager rounded-3 border border-2 border-black" id="questionManager">
-    <h2 class="text-center">Question Manager</h2>
-    <button id="toggleManager" class="btn btn-success fw-bold fs-6">Hide questions list</button>
-    <div class="manager-content">
-      <div>
-        <form class="" id="questionForm">
-          <input type="text" class="form-control bg-transparent" id="newQuestion" placeholder="Add the question"
-            required>
-          <input type="text" class="form-control bg-transparent" id="newAnswer" placeholder="Add the answer" required>
-          <button id="addQuestionBtn" type="button" class="btn btn-success fw-bold fs-6">Add question</button>
-
+        <form action="">
+          <div class="row">
+            <div class="col-md-3 mb-3"><input type="text" class="form-control" placeholder="Question" id="questions">
+            </div>
+            <div class="col-md-3 mb-3"><input type="text" class="form-control" placeholder="Options (option1, option2)"
+                id="option"></div>
+            <div class="col-md-3 mb-3"><input type="text" class="form-control" placeholder="Correct Answer" id="answer">
+            </div>
+            <div class="col-md-3 d-grid m-auto pb-5"><button type="button" class="btn btn-primary"
+                id="add-btn">Add</button></div>
+          </div>
+          <div class="col-md-3 d-grid m-auto pb-2">
+            <button type="button" class="btn btn-danger d-none" id="clear-btn"><i class="fa fa-trash"></i> Remove All</button>
+          </div>
         </form>
       </div>
-      <ul id="questionsList"></ul>
-    </div>
-  </div>
+    </section>
+  </header>
 
+  <section>
+    <div class="container pt-3">
+      <div class="quiz-container text-center p-3 border rounded shadow-sm bg-light-subtle">
+        <h2>Choose Answer</h2>
+        <div id="question" class="fs-4 my-3 fw-bold"></div>
+        <div class="d-flex flex-wrap justify-content-center mb-3" id="options"></div>
+        <button class="btn btn-success d-none" id="next-btn">Next Answer</button>
+        <div id="result"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Button Top -->
+  <div class="container">
+    <button class="btn btn-primary rounded-circle float-end" id="btnTop" aria-label="Back to Top">
+      <i class="fa fa-arrow-up"></i></button>
+  </div>
   <script src="./script.js"></script>
+  <script src="../../js/mainAll.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"
     defer></script>
